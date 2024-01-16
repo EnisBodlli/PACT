@@ -1,18 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour
+namespace PactRandomUtils
 {
-    // Start is called before the first frame update
-    void Start()
+    public class InspectorButton : System.Attribute
     {
-        
+        public float spaceBefore = 0f;
+
+        public InspectorButton(float spaceBefore)
+        {
+            this.spaceBefore = spaceBefore;
+        }
+
+        public InspectorButton()
+        {
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public class HideFromInspectorIf : PropertyAttribute
     {
-        
+        public string hidingFieldName;
+        public HideFromInspectorIf(string hidingFieldName)
+        {
+            this.hidingFieldName = hidingFieldName;
+        }
+
+    }
+
+
+    public class DrawnNonSerialized : System.Attribute
+    {
     }
 }

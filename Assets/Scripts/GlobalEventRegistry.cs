@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+namespace Pact.Events.Registry
 {
-    // Start is called before the first frame update
-    void Start()
+ 
+    public struct Test1
     {
-        
+        public string Enis;
     }
+    public struct MainMenuManagerEVT
+    {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+   
 }
