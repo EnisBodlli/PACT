@@ -5,7 +5,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using PactRandomUtils;
-namespace TimeWarp.Events
+namespace Pact.Events
 {
     public class GlobalEventManager : PactRandomUtils.Singleton<GlobalEventManager>
     {

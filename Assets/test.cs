@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PactRandomUtils;
-using TimeWarp.Events;
+using Pact.Events;
 using Pact.Events.Registry;
 
 public class test : MonoBehaviour
@@ -27,6 +27,10 @@ public class test : MonoBehaviour
     // Update is called once per frame
     private void OnDisable()
     {
-        GlobalEventManager.Instance.RemoveAllListenersFor(this);
+        if (GlobalEventManager.Instance!=null)
+        {
+            GlobalEventManager.Instance.RemoveAllListenersFor(this);
+        }
+   
     }
 }
