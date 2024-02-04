@@ -6,6 +6,7 @@ namespace Pact.WindowManager.Enum
         ScenarioBuilder = 1,
         CUASScreen = 2,
         PauseMenu = 3,
+        SystemUI =4,
      
     }
 }

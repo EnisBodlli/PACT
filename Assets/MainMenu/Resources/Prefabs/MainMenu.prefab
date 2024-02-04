@@ -8917,7 +8917,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4423717866760290}
   - component: {fileID: 20434830277144118}
-  - component: {fileID: 9139238942983612573}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -8992,30 +8991,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &9139238942983612573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700773011207386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8dcd5e8718dbe045851ad065b86ec57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: {fileID: 11400000, guid: 8b0140bc4c626f24eabb6f5c87f1492e, type: 2}
-  firstSelected: {fileID: 0}
-  onOpening:
-    m_PersistentCalls:
-      m_Calls: []
-  onClosing:
-    m_PersistentCalls:
-      m_Calls: []
-  onClosed:
-    m_PersistentCalls:
-      m_Calls: []
-  childWindows: []
 --- !u!1 &1701970906798728
 GameObject:
   m_ObjectHideFlags: 0
