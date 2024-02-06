@@ -4,7 +4,7 @@ namespace Pact.WindowManager.Enum
     {
         MainMenu = 0,
         ScenarioBuilder = 1,
-        CUASScreen = 2,
+        RadarScreen = 2,
         PauseMenu = 3,
         SystemUI =4,
      

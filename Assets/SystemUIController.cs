@@ -1,3 +1,5 @@
+using Pact.WindowManager;
+using Pact.WindowManager.Enum;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,6 +27,10 @@ public class SystemUIController : MonoBehaviour
 
         text.text = "Radius(KM):" + value.ToString();
     }
-
+    public void OnBackBtnClicked()
+    {
+        WindowManager.Instance.CloseAllWindows();
+        WindowManager.Instance.OpenWindow(WindowType.RadarScreen);
+    }
 
 }

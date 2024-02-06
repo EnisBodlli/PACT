@@ -1,3 +1,5 @@
+using Microsoft.Maps.Unity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +11,10 @@ namespace Pact.Events.Registry
     {
         public string Enis;
     }
-    public struct MainMenuManagerEVT
+    public struct MapRendererReference
     {
-
+        public Action<MapRenderer> ResponseAction;
+       
     }
    
 }

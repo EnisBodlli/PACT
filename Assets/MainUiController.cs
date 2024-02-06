@@ -1,18 +1,14 @@
+using Pact.WindowManager;
+using Pact.WindowManager.Enum;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MainUiController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   public void OnRadarScreenClicked()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        WindowManager.Instance.CloseAllWindows();
+        WindowManager.Instance.OpenWindow(WindowType.RadarScreen);
     }
 }

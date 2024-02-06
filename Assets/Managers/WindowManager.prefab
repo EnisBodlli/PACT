@@ -61,7 +61,9 @@ MonoBehaviour:
   windowsParentInGame: {fileID: 1504809774853916244}
   windowsParentOverlay: {fileID: 0}
   windows:
-  - {fileID: 1700773011207386, guid: 62c936eb2f7ddb640927fbd160b6574d, type: 3}
+  - {fileID: 8237465396754341853, guid: 830053af825188f44b748a583da410fd, type: 3}
+  - {fileID: 8237465396754341853, guid: 413de4bff74b55e4a9b5a8e8e3f168ea, type: 3}
+  - {fileID: 8237465396754341853, guid: 8cc6175a9934d25419397e60013f409c, type: 3}
 --- !u!1 &7950963471221063739
 GameObject:
   m_ObjectHideFlags: 0
