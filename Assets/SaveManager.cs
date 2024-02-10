@@ -11,6 +11,7 @@ public class SaveManager : MonoBehaviour
     {
         public float mapLatitude;
         public float mapLongitude;
+        public float mapZoomLevel;
     }
 
     public static void SaveGame(int slotIndex, GameData data)
