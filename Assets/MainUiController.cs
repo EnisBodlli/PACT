@@ -11,4 +11,9 @@ public class MainUiController : MonoBehaviour
         WindowManager.Instance.CloseAllWindows();
         WindowManager.Instance.OpenWindow(WindowType.RadarScreen);
     }
+    public void OnObjCreatingBrnClicked()
+    {
+        WindowManager.Instance.CloseAllWindows();
+        WindowManager.Instance.OpenWindow(WindowType.ObjectCreating);
+    }
 }

@@ -1,18 +1,34 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PathFollower : MonoBehaviour
 {
-    public float speed = 5f;
-    private List<Vector3> pathPoints;
-    private int currentPointIndex = 0;
 
+    public string Name;
+    public string RCS;
+    public bool C2;
+    public bool Gps;
+    public bool Noise;
+
+
+   
+    public float speed = 5f;
+    public Sprite uiRepresentation;
+    public List<Vector3> pathPoints;
+    private int currentPointIndex = 0;
+    public bool canLoop;
     public void SetPath(List<Vector3> points, bool loop)
     {
         pathPoints = points;
-        if (loop && points.Count > 1)
+        canLoop = loop;
+    }
+    public void Startpathing()
+    {
+        
+        if (canLoop && pathPoints.Count > 1)
         {
-            pathPoints.Add(points[0]); // Add the first point at the end to loop
+            pathPoints.Add(pathPoints[0]); // Add the first point at the end to loop
         }
         currentPointIndex = 0;
         if (pathPoints.Count > 0)
@@ -20,7 +36,6 @@ public class PathFollower : MonoBehaviour
             transform.position = pathPoints[currentPointIndex]; // Move to the first point
         }
     }
-
     private void Update()
     {
         if (pathPoints == null || pathPoints.Count == 0) return;

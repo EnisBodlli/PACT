@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using Microsoft.Maps.Unity;
 
 public class MapClickHandler : MonoBehaviour, IPointerClickHandler
 {
@@ -11,6 +12,11 @@ public class MapClickHandler : MonoBehaviour, IPointerClickHandler
     public RectTransform uiImageRectTransform; // Assign the RectTransform of the UI Image that displays the render texture
     public PathFollower pathFollower;
     private List<Vector3> waypoints = new List<Vector3>();
+    private void Awake()
+    {
+        topDownCamera = GameObject.FindGameObjectWithTag("MapCamera").GetComponent<Camera>();
+        uiImageRectTransform = this.GetComponent<RectTransform>();
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         // Convert the click position to be relative to the UI Image
@@ -38,6 +44,7 @@ public class MapClickHandler : MonoBehaviour, IPointerClickHandler
     public void CreateAndFollowPath()
     {
         pathFollower.SetPath(waypoints, true);
+        waypoints.Clear();
     }
     private void Instantiate2DUIPrefabAtClickPosition(Vector2 localPoint)
     {

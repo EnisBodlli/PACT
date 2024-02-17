@@ -11,10 +11,14 @@ namespace Pact.Events.Registry
     {
         public string Enis;
     }
-    public struct MapRendererReference
+    public struct ObjectSelectionReference
     {
-        public Action<MapRenderer> ResponseAction;
+        public Action<ObjectSelection> ResponseAction;
        
     }
-   
+    public struct GameManagerEVT
+    {
+        public Action<GameManager> ResponseAction;
+
+    }
 }
